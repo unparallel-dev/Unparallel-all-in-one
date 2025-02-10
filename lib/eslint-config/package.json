@@ -1,0 +1,13 @@
+{
+    "name": "@my-org/eslint-config",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "eslint.config.js",
+    "dependencies": {
+      "@next/eslint-plugin-next": "^latest",
+      "eslint-plugin-prettier": "^latest",
+      "eslint-config-prettier": "^latest",
+      "eslint-plugin-boundaries": "^latest"
+    }
+  }
+  

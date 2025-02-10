@@ -1,0 +1,44 @@
+{
+  "name": "unparallel",
+  "version": "1.0.0",
+  "description": "Monorepo for Unparallel applications and libraries",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "bunx jest",
+    "lint": "bunx eslint .",
+    "format": "bunx prettier --write .",
+    "lint:format": "npm-run-all --parallel lint format",
+    "dev": "bun run --watch --bun --hot src/index.ts",
+    "lint:all": "bun run --filter 'apps/*' lint",
+    "format:all": "bun run --filter 'apps/*' format", 
+    "test:all": "bun run --filter 'apps/*' test"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.12.6",
+    "bun-types": "^1.2.2",
+    "drizzle-orm": "latest",
+    "undici-types": "^6.20.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@types/bun": "latest",
+    "eslint": "^9.20.0",
+    "eslint-config-prettier": "^10.0.1",
+    "globals": "^15.14.0",
+    "jest": "^29.7.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "3.5.0",
+    "tailwindcss": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unparallel-dev/Unparallel-all-in-one.git"
+  },
+  "author": "Rushil Gupta",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/unparallel-dev/Unparallel-all-in-one/issues"
+  },
+  "homepage": "https://github.com/unparallel-dev/Unparallel-all-in-one#readme"
+}
